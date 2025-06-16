@@ -1,5 +1,3 @@
-setwd("/cloud/project/murakami_dataset")
-
 # LIBRARIES USED
 library(shiny)
 library(plotly)
