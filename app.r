@@ -51,7 +51,7 @@ div(style = "display: flex; align-items: flex-start; gap: 20px; margin-bottom: 3
 server <- function(input, output, session) {
 
 # REFER TO THE CSV
-df3 <- read.csv("/cloud/project/murakami_dataset/data/altmurakami.csv", stringsAsFactors = FALSE)
+df3 <- read.csv("data/altmurakami.csv", stringsAsFactors = FALSE)
   # strings as factors set to false in order to allow for line chart. 
   
   # TAB 1: LINE GRAPH - Publishing Productivity
