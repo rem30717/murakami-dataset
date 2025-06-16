@@ -1,3 +1,5 @@
+setwd("/cloud/project/murakami_dataset")
+
 # LIBRARIES USED
 library(shiny)
 library(plotly)
@@ -51,7 +53,7 @@ div(style = "display: flex; align-items: flex-start; gap: 20px; margin-bottom: 3
 server <- function(input, output, session) {
 
 # REFER TO THE CSV
-df3 <- read.csv("C:/Users/bianc/Downloads/murakami dataset/data/altmurakami.csv", stringsAsFactors = FALSE)
+df3 <- read.csv("/cloud/project/murakami_dataset/data/altmurakami.csv", stringsAsFactors = FALSE)
   # strings as factors set to false in order to allow for line chart. 
   
   # TAB 1: LINE GRAPH - Publishing Productivity
@@ -68,7 +70,7 @@ df3 <- read.csv("C:/Users/bianc/Downloads/murakami dataset/data/altmurakami.csv"
         .groups = "drop"
       ) %>%
     arrange(publication.date)
-    b-009
+    
     # CREATING THE LINE GRAPH
     # hovering shows the count, year and books
     p1 <- ggplot(productivity_data, aes(x = publication.date, y = books_published,
@@ -177,4 +179,4 @@ df3 <- read.csv("C:/Users/bianc/Downloads/murakami dataset/data/altmurakami.csv"
 
 shinyApp(ui = ui, server = server)
 #runApp("C:/Users/bianc/Downloads/murakami dataset/datavis3.r")
-#shiny::runApp("C:/Users/bianc/Downloads/murakami dataset/app.r")
+#shiny::runApp("murakami_dataset/app.r")
